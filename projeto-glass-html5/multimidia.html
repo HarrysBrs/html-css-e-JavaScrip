@@ -1,25 +1,59 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <Title>Tudo sobre Google Glass</Title>
+        <link rel="stylesheet" href="_css/style.css"/>
+        <link rel="stylesheet" href="_css/media.css"/>
+    </head>
+    <script src="_javascript/funcoes.js"></script>
+    <body>
+    <div id="interface" class="clearfix">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>   
+            
+            <img id="icone" src="_imagens/multimidia.png">
 
-[AQUI ENTRA UMA FOTO]
+<nav id="Menu">
+    <h1>Menu Principal</h1>
+    <ul>
+        <li onmouseover="mudafoto ('_imagens/home.png')"onmouseout="mudafoto('_imagens/multimidia.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudafoto('_imagens/especificacoes.png')"onmouseout="mudafoto('_imagens/multimidia.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudafoto('_imagens/fotos.png')"onmouseout="mudafoto('_imagens/multimidia.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudafoto('_imagens/contato.png')"onmouseout="mudafoto('_imagens/multimidia.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+    </ul>
+</nav>
+      </header>
+    </header>
+    <section id="corpo-full">
+    <article id="noticia-principal">
+        <header id="cabecalho-artigo">
+        <hgroup>
+            <h3>Glass > fotos </h3>
+            <h1>Galeria de fotos do Google Glass</h1>
+            <h2>por Henry Vieira</h2>
+            <h3 class="specs">Atualizado em 05/Maio/2025</h3>
+        </hgroup>
+        </header> 
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
-
-Glass > Multimídia
-Sons e Vídeos
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
-
-
-Áudio e Vídeo
-
-[AQUI ENTRA UM VÍDEO]
-[AQUI ENTRA UM ÁUDIO]
-
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+<div id="tv-radio">
+    <audio id="musica" controls="controls">
+        <source src="_media/2009-lovers-carvings-bibio.mp3" type="audio/mpeg"/>
+        Desculpe, não foi possível Reproduzir o audio.
+    </audio>
+    <video id="filme" controls="controls" poster="_imagens/video-mini03.jpg">
+        <source src="_media/getting-started.mp4" type="video/mp4"/>
+        Desculpe, não foi possível Reproduzir o video.
+    </video>
+</div>
+<footer id="rodape">
+    <p>Copyright 2024 - by Henry Vieira <br/>
+    <a href="http://facebook.com" target="_blank">Facebook</a> 
+    <a href="http://Twitter.com" target="_blank">Twitter</a></p>
+</footer>
+    </div>
+</body>
+</html>

@@ -1,47 +1,109 @@
-Google Glass
-A revolução do Google está chegando
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <Title>Tudo sobre Google Glass</Title>
+        <link rel="stylesheet" href="_css/style.css"/>
+        <link rel="stylesheet" href="_css/form.css"/>
+        <script language="javascript" src="_javascript/funcoes.js"></script>
+        <script>
+            function cal_total() {
+                var qtd = parseInt(document.getElementById('cQtd').value);
+                tot = qtd * 1500;
+                document.getElementById('cTot').value = tot;
+            }
+        </script>
+    </head>
+    <script src="_javascript/funcoes.js"></script>
+    <body>
+    <div id="interface" class="clearfix">
+        <header id="cabecalho">
+            <hgroup>
+                <h1>Google Glass</h1>
+                <h2>A revolução do Google está chegando</h2>
+            </hgroup>   
+            
+            <img id="icone" src="_imagens/contato.png">
 
-[AQUI ENTRA UMA FOTO]
+<nav id="Menu">
+    <h1>Menu Principal</h1>
+    <ul>
+        <li onmouseover="mudafoto ('_imagens/home.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+        <li onmouseover="mudafoto('_imagens/especificacoes.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+        <li onmouseover="mudafoto('_imagens/fotos.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+        <li onmouseover="mudafoto('_imagens/multimidia.png')"onmouseout="mudafoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+    </ul>
+</nav>
+      </header>
 
-Menu Principal
-- Home
-- Especificações
-- Fotos
-- Multimídia
-- Fale conosco
+</header>
+<section id="corpo-full">
+<article id="noticia-principal">
+    <header id="cabecalho-artigo">
+    <hgroup>
+        <h3>Fale Conosco > Contato </h3>
+        <h1>Formulário de Contato</h1>
+        <h2>por Henry Vieira</h2>
+        <h3 class="specs">Atualizado em 05/Maio/2025</h3>
+    </hgroup>
+    </header> 
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+<form method="post" id="fContato" action="mailto:hennry-luis@outlook.com" oninput="cal_total();">
+    <fieldset id="usuario"> 
+        <legend>Identificação do Usuário</legend>
+        <p><label for="cNome">Nome:</label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"/></p>
+        <p><label for="cSenha">Senha:</label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="Até 8 Digitos"/></p>
+        <p><label for="cMail">E-mail:</label><input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Seu melhor e-mail"/></p>
+        <fieldset id="sexo"> 
+            <legend>Sexo:</legend>
+            <input type="radio" name="tSexo" id="cMasc"/> <label for="cMasc">Masculino</label><br/>
+            <input type="radio" name="tSexo" id="cFem"/> <label for="cFem">Feminino</label>
+        </fieldset>
+        <p><label for="cNasc">Data de Nascimento:</label><input type="date" name="tNasc" id="cNask"/></p>
+    </fieldset> 
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
+    <fieldset id="endereco"> 
+        <legend>Endereço do Usuário</legend>
+        <p><label for="cRua">Logradouro:</label><input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av."/></p>
+        <p><label for="cNum">Número:</label><input type="number" name="tNum" id="cNum" min="0" max="99999"/></p>
+        <p><label for="cEst">Estado:</label><select>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+            <optgroup label="Região Sul"><option value="RS"selected>Rio Grande do Sul</option></optgroup>
+        </select></p>
+        <p><label for="cCid">Cidade:</label>
+        <input type="text" name="tCid" id="cCid" maxlength="40"  size="20" placeholder="Sua Cidade" list="cidades">
+        </p>
+        <datalist id="cidades">
+            <option value="Cachoeirinha"></option>
+            <option value="Rio de Janeiro"></option>
+            <option value="São Paulo"></option>
+        </datalist>
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
+    </fieldset> 
+    <fieldset id="mensagem">
+        <legend>Mensagem do Usuário</legend>
+        <p><label for="cUrg">Grau de Urgência:</label>
+        Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2"/>Max</p>
+        <p><label for="cMsg">Mensagem:</label>
+        <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Deixa aqui sua mensagem"></textarea></p>
+    </fieldset>
 
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
+    <fieldset id="pedido">    
+        <legend>Quero um Google Glass</legend>
+        <p><input type="checkbox" name="tPed" id="cPed" checked/><label for="cPed"> Gostaria de adquirir um Google Glass quando disponível</label></p>
+        <p><label for="cCor">Cor:</label><input type="color" name="tCor" id="cCor" value="#ffffff"/></p>
+        <p><label for="cQtd">Quantidade:</label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="1"/></p>
+        <p><label for="cTot">Preço Total: R$</label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly/></p>
+    </fieldset>
+<label for="cEnviar"><input type="image" name="tEnviar" id="cEnviar" src="_imagens/botao-enviar.png"/></label>
+</form>
 
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-
-Copyright 2013 - by Gustavo Guanabara
-Facebook | Twitter
+<footer id="rodape">
+    <p>Copyright 2024 - by Henry Vieira <br/>
+    <a href="http://facebook.com" target="_blank">Facebook</a> 
+    <a href="http://Twitter.com" target="_blank">Twitter</a> </p>
+</footer>
+    </div>
+</body>
+</html>

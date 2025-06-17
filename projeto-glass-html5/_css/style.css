@@ -7,16 +7,18 @@
 }
 /*Aqui é onde formatamos o fundo do site*/
 body{
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #dddd;   
 }
-div#interface {
-    width: 2050px;
-    background-color: #ffff;    
-    margin: -10px auto auto auto;
-    box-shadow: 0px 0px 10px black;
-    padding: 10px;
 
+div#interface {
+    width: 1300px;
+    background-color: #ffff;    
+    margin: -20px auto 0px auto;
+    box-shadow: 0px 0px 10px black;
+    padding: 10px 10px 10px 10px;
 }
+
 /* Aqui é uma das soluções para ajudar o problema de container*/
 .clearfix::after {
     content:"";
@@ -26,7 +28,7 @@ div#interface {
 /*Aqui é onde formatamos os titulos em h1*/
 h1 {
     font-family: Arial;
-    font-size: 30pt;
+    font-size: 20pt;
     color: rgb(0, 0, 0);
 }
 /*Aqui é onde formatamos os paragrafos*/
@@ -36,38 +38,53 @@ p {
     overflow: break-word;
     text-align: justify;
     text-indent: 50px;
-    font-size: 25px;
+    font-size: 15px;
 }
+
+a {
+    color: #606060;
+    text-decoration: none; 
+}
+a:hover {
+    text-decoration: underline;
+}
+
 span.sublinhado { 
-        text-decoration: underline;
+    text-decoration: underline;
 }
 
 header#cabecalho img#icone {
     position: absolute;
-    left: 1925px;
-    top: 80px;
+    left: 81%;
+    top: 18%;
+    width: auto;
+    height: 100%;
+    max-width: 250px;
+
 }
+
 header#cabecalho h1 {
     font-family: 'FonteLogo', sans-serif;
-    font-size: 40pt;
+    font-size: 35pt;
     color: #606060;
     text-shadow: 1px 1px 1px rgba(0,0,0,.6);
     padding: 0px;
     margin-bottom: 0px;
 }
+
 header#cabecalho h2 {
     font-family: "Titillium Web", sans-serif;
     color: #888888;
     font-size: 20pt;
     padding: 0px;
     margin-top: 0px;
-
 }
 
 header#cabecalho {
     border-bottom: 1px #606060 solid;
     height: 200px;
     background: url(../_imagens/glass-logo-peq.jpg) no-repeat 0px 130px ;
+    position: relative;
 }
 
 /*Formatação de Imagens com Legendas*/
@@ -101,6 +118,7 @@ figure.foto-legenda figcaption {
 figure.foto-legenda:hover figcaption {
     opacity: 1;
 }
+
 /*Formatação para o Menu Superior*/
 nav#Menu{
     display: block;
@@ -110,19 +128,24 @@ nav#Menu ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
-    top: -10px;
-    left: 1150px;
+    top: -52px;
+    right: -10px;
 }
+
 /*Este trata do menu, especificamente o bloco */
 nav#Menu li {
     display: inline-block; 
     background-color: #dddd;  
-    padding: 10px;
-    margin: 2px; 
-    font-size: 28px;
+    padding: 13px;
+    margin: 0px; 
+    font-size: 25px;
     transition: background-color 1s;
 } 
-/*Este trata do menu, especificamente cada tópico*/
+nav#Menu li:hover {
+    text-decoration: underline;
+}
+
+/*Este do efeito de escurecer ao passar o mouse por cima*/
 nav#Menu li:hover {
     background-color: #606060;
 }
@@ -142,11 +165,52 @@ nav#Menu a:hover {
 /* Divide em duas partes o site, a esquerda e direia*/
 section#corpo {
     display: block;
-    width: 1000px;
+    width: 650px;
     float: left;
     border-right: 1px solid #606060;
     padding-right: 15px;
 }
+article#noticia-principal h2 {
+    font-size: 20px;
+    color: #ffff;
+    background-color: #606060;
+    padding: 5px 0px 5px 10px;
+    margin: 10px -15px 10px -10px;
+}
+
+header#cabecalho-artigo h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 25pt;
+    color: #606060;
+    margin-bottom: 0px;
+    margin-left: -8px;
+    margin-top: 8px;
+}
+
+header#cabecalho-artigo h2 {
+    font-size: 15pt;
+    color: #ada7a7;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-left: -17px;
+}
+
+header#cabecalho-artigo h3 {
+    font-size: 15px;
+    color: #606060;
+    margin-bottom: 3px;
+    margin-left: -10px;
+}
+header#cabecalho-artigo h3.direita {
+    margin-bottom: -10px;
+    margin-right: -14px;
+}
+header#cabecalho-artigo h3.specs {
+    margin-left: 1100px;
+}
+.direita {
+    text-align: right;  
+}
+
 table#tabela {
     border: 1px solid #606060;
     font-size: 30px;
@@ -162,9 +226,30 @@ table#tabela td {
 }
 aside#lateral {
     display: block;
-    width: 1000px; ;
+    width: 600px;
     float: right;
+    background-color: #dddddd;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0,.5) ;
 }
+
+aside#lateral h1 {
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 30pt;
+    color: #606060;
+    margin-top: 15px;
+}
+
+aside#lateral h2 {
+   background-color: #606060;
+   font-size: 20pt; 
+   color: #ffff;
+   padding: 5px;
+
+}
+
 footer#rodape {
     clear: both;
     border-top: 1px solid #606060;
@@ -181,4 +266,19 @@ table#tabela td.ce {
 }
 table#tabela td.cd {
     background-color: #cecece;
+
+}
+
+table#tabela caption {
+    color: #808080;
+    font-size: 30pt;
+    font-weight: bolder;
+}
+
+table#tabela caption span {
+    display: block;
+    float: right;
+    color: #000000;
+    font-size: 17pt;
+    margin-top: 20pt;
 }
