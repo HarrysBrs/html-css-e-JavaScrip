@@ -210,7 +210,13 @@ header#cabecalho-artigo h3.specs {
 .direita {
     text-align: right;  
 }
+video {
+    width: 600px;
+}
 
+video#filme2 {
+    margin-left: 30px;
+}
 table#tabela {
     border: 1px solid #606060;
     font-size: 30px;
