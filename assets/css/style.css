@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: 'FonteLogo';
-    src: url("../_fonts/bubblegum-sans-regular.otf");
+    src: url("../fonts/bubblegum-sans-regular.otf");
 }
 /*Aqui é onde formatamos o fundo do site*/
 body{
@@ -83,7 +83,7 @@ header#cabecalho h2 {
 header#cabecalho {
     border-bottom: 1px #606060 solid;
     height: 200px;
-    background: url(../imagens/glass-oculos-preto-peq.png) no-repeat 0px 130px ;
+    background: url(../imagens/glass-logo-peq.jpg) no-repeat 0px 130px;
     position: relative;
 }
 
